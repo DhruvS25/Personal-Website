@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useForm } from 'react-hook-form'
 import { Navbar } from './components/Navbar'
 import { ThemeToggle } from './components/ThemeToggle'
+import Footer from './components/Footer'
 
 type ContactForm = {
   name: string
@@ -31,9 +32,6 @@ function App() {
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
             <h1 className="mb-4 text-5xl font-bold md:text-6xl">Welcome to My Website</h1>
-            <p className="mb-8 text-lg text-neutral-600 dark:text-neutral-300 md:text-xl">
-              React 18 + TypeScript + Vite + Tailwind + Framer Motion + lucide-react + react-hook-form
-            </p>
             <div className="inline-flex items-center gap-3">
               <button
                 className="rounded-md border px-4 py-2 text-sm font-medium transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-800"
@@ -126,6 +124,8 @@ function App() {
           </motion.div>
         </div>
       </section>
+      <ThemeToggle />
+      <Footer />
     </div>
   )
 }
