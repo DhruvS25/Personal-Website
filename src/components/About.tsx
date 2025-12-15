@@ -35,7 +35,7 @@ export default function About() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
       {/* Gradient background effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
@@ -62,7 +62,7 @@ export default function About() {
           variants={itemVariants as any}
           className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
         >
-          <span className="gradient-text">Alex Chen</span>
+          <span className="gradient-text">Dhruv Sagre</span>
         </motion.h1>
 
         {/* Title/Description */}
@@ -71,8 +71,8 @@ export default function About() {
           className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed"
         >
           Software Engineer specializing in{' '}
-          <span className="text-purple-400 font-semibold">Game Development</span> &{' '}
-          <span className="text-cyan-400 font-semibold">Artificial Intelligence</span>
+          <span className="text-purple-400 font-semibold">Full Stack Development</span> &{' '}
+          <span className="text-cyan-400 font-semibold">Artificial Intelligence Tools</span>
         </motion.p>
 
         {/* Mission statement */}
@@ -126,7 +126,7 @@ export default function About() {
           className="flex gap-6 justify-center"
         >
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/DSagre25"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
@@ -135,7 +135,7 @@ export default function About() {
             <Github className="w-6 h-6" />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/dhruv-sagre-54998122a/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110 transform"
@@ -144,7 +144,7 @@ export default function About() {
             <Linkedin className="w-6 h-6" />
           </a>
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:dhruvsagre252@gmail.com"
             className="text-gray-400 hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
             aria-label="Email"
           >

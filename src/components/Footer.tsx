@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold gradient-primary bg-clip-text text-transparent">
-              Alex Chen
+              Dhruv Sagre
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Software Engineer passionate about creating innovative games and AI solutions. 
