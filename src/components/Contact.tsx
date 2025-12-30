@@ -30,7 +30,7 @@ export default function Contact() {
                         <input
                         id="name"
                         className="rounded-md border bg-transparent px-3 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 focus:border-neutral-400 dark:border-neutral-700 dark:focus:border-neutral-500"
-                        placeholder="Ada Lovelace"
+                        placeholder="John Smith"
                         {...register('name', { required: true })}
                         />
                         {errors.name && <span className="text-sm text-red-500">Name is required</span>}
@@ -41,7 +41,7 @@ export default function Contact() {
                         id="email"
                         type="email"
                         className="rounded-md border bg-transparent px-3 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 focus:border-neutral-400 dark:border-neutral-700 dark:focus:border-neutral-500"
-                        placeholder="ada@math.org"
+                        placeholder="johnsmith@example.com"
                         {...register('email', { required: true })}
                         />
                         {errors.email && <span className="text-sm text-red-500">Email is required</span>}
