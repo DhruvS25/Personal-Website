@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import siteLogoLight from '../assets/site_logo.PNG'
 import siteLogoDark from '../assets/Sitelogotest.jpg'
 
@@ -19,6 +20,8 @@ const navLinks: NavLink[] = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     function handleScroll() {
@@ -28,16 +31,38 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Handle scrolling to hash after navigation
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '')
+      setTimeout(() => {
+        const element = document.getElementById(targetId)
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          })
+        }
+      }, 100)
+    }
+  }, [location])
+
   function handleNavClick(e: React.MouseEvent<HTMLElement>, href: string) {
     e.preventDefault()
     const targetId = href.replace('#', '')
-    const element = document.getElementById(targetId)
     
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      })
+    // If we're not on the home page, navigate to home with hash
+    if (location.pathname !== '/') {
+      navigate(`/${href}`)
+    } else {
+      // If we're on the home page, just scroll to the element
+      const element = document.getElementById(targetId)
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        })
+      }
     }
     
     setIsOpen(false)

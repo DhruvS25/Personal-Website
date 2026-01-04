@@ -54,7 +54,7 @@ export default function About() {
           variants={itemVariants as any}
           className="text-cyan-400 text-sm md:text-base mb-4 font-mono"
         >
-          Hello World! I'm
+          Hello, I'm
         </motion.p>
 
         {/* Name with gradient */}

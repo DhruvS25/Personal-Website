@@ -1,11 +1,13 @@
 import { Routes, Route } from 'react-router-dom'
 import Index from './components/Index'
 import NotFound from './components/NotFound'
+import BellAITechnician from './components/BellAITechnician'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/projects/bell-ai-technician" element={<BellAITechnician />} />
 
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
 

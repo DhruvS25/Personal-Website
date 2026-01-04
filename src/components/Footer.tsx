@@ -36,9 +36,9 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground">Connect</h4>
             <div className="flex space-x-4">
               {[
-                { icon: Github, href: "https://github.com", label: "GitHub" },
-                { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:alex@example.com", label: "Email" }
+                { icon: Github, href: "https://github.com/DSagre", label: "GitHub" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/dhruv-sagre-54998122a/", label: "LinkedIn" },
+                { icon: Mail, href: "mailto:dhruvsagre252@gmail.com", label: "Email" }
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -57,9 +57,7 @@ const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-            © {currentYear} Alex Chen. Built with
-            <Heart className="w-4 h-4 text-red-500" />
-            and lots of caffeine.
+            © {currentYear} Dhruv Sagre.
           </p>
         </div>
       </div>

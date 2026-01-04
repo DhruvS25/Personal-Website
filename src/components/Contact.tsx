@@ -46,6 +46,16 @@ export default function Contact() {
                         />
                         {errors.email && <span className="text-sm text-red-500">Email is required</span>}
                     </div>
+                    <div className="w-full">
+                        <label htmlFor="message" className="text-sm text-neutral-600 dark:text-neutral-300">Message</label>
+                        <textarea
+                        id="message"
+                        className="w-full rounded-md border bg-transparent px-2 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 focus:border-neutral-400 dark:border-neutral-700 dark:focus:border-neutral-500 resize-none"
+                        placeholder="Hey let's connect! I want to discuss a potential project or collaboration."
+                        rows={4}
+                        style={{ width: '847px' }}
+                        />
+                    </div>
                     <div className="sm:col-span-2">
                         <button type="submit" className="w-full rounded-md bg-neutral-900 px-4 py-2 text-white transition-colors hover:bg-neutral-800 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200">
                         Submit
