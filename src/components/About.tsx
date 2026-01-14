@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import resumePdf from '../assets/resume.pdf';
 
 export default function About() {
   // Animation variants
@@ -60,9 +61,14 @@ export default function About() {
         {/* Name with gradient */}
         <motion.h1
           variants={itemVariants as any}
-          className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight"
+          className="text-6xl md:text-7xl lg:text-8xl mb-6 tracking-tight"
         >
-          <span className="gradient-text">Dhruv Sagre</span>
+          <span 
+            className="font-tr2n text-cyan-400 tr2n-font" 
+            style={{ fontFamily: "'Tr2n', sans-serif", color: '#22d3ee' }}
+          >
+            Dhruv Sagre
+          </span>
         </motion.h1>
 
         {/* Title/Description */}
@@ -99,7 +105,7 @@ export default function About() {
           </button>
 
           <a
-            href="/resume.pdf"
+            href={resumePdf}
             download
             className="group px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center gap-2"
           >

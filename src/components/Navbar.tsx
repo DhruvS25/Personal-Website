@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import siteLogoLight from '../assets/site_logo.PNG'
-import siteLogoDark from '../assets/Sitelogotest.jpg'
 
 interface NavLink {
   label: string
@@ -86,22 +84,12 @@ export function Navbar() {
             <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-2 transition-opacity hover:opacity-80"
+              className="flex items-center gap-2 transition-opacity hover:opacity-80 text-white text-2xl font-tr2n"
+              style={{ fontFamily: "'Tr2n', sans-serif", color: 'white' }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {/* Dark mode logo */}
-              <img
-                src={siteLogoDark}
-                alt="Logo"
-                className="h-12 w-auto object-contain hidden dark:block"
-              />
-              {/* Light mode logo */}
-              <img
-                src={siteLogoLight}
-                alt="Logo"
-                className="h-8 w-auto object-contain block dark:hidden"
-              />
+              DS
             </motion.a>
 
             {/* Nav Links - Center (Desktop) */}

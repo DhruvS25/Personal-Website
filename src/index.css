@@ -3,10 +3,15 @@
 /* Tr2n Font Declaration */
 @font-face {
   font-family: 'Tr2n';
-  src: url('./assets/font/Tr2n.ttf') format('truetype');
+  src: url('/fonts/Tr2n.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* Direct CSS class for testing */
+.tr2n-font {
+  font-family: 'Tr2n', sans-serif !important;
 }
 
 /* Smooth scroll behavior */
