@@ -49,14 +49,14 @@ const projects = [
 // media: { type: 'youtube', url: 'https://www.youtube.com/embed/YOUR_VIDEO_ID' }
 const personalProjects = [
   {
-    title: 'Project Name 1',
-    date: 'Date',
-    technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
-    description: 'Description of your project goes here. Explain what the project is about, what problem it solves, and any key features.',
+    title: 'Godspeed',
+    date: 'August 2025 - Present',
+    technologies: ['Unity', 'C#', '3D Graphics', 'Blender', 'Game Development', 'UI/UX Design'],
+    description: 'Godspeed is a 3D racing game deeloped in Unity, where the player controls a character with unique abilities to race against other players in a competitive environment.',
     achievements: [
-      'Achievement or feature 1',
-      'Achievement or feature 2',
-      'Achievement or feature 3'
+      'Developed a custom physics based movement system for the player character',
+      'Created custom abilities for the player character and VFX for the abilities',
+      'Created unique track design and obstacles for the game'
     ]
   },
   {
@@ -92,33 +92,33 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
-        className="rounded-xl border dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:shadow-lg transition-shadow overflow-hidden"
+        className="rounded-xl border border-neutral-300 bg-white hover:shadow-lg transition-shadow overflow-hidden"
       >
         {/* Collapsed View - Resume Style */}
         <div
           onClick={() => toggleFn(index)}
-          className="p-6 cursor-pointer hover:bg-neutral-50 dark:hover:bg-neutral-800/50 transition-colors"
+          className="p-4 sm:p-6 cursor-pointer hover:bg-neutral-50 transition-colors"
         >
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex-1">
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
+          <div className="flex items-start justify-between gap-3 sm:gap-4">
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center justify-between mb-2 gap-2">
+                <h3 className="text-lg sm:text-xl font-bold text-black break-words">
                   {project.title}
                 </h3>
                 {isExpanded ? (
-                  <ChevronUp className="w-5 h-5 text-neutral-500 dark:text-neutral-400 flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-black flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-neutral-500 dark:text-neutral-400 flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-black flex-shrink-0" />
                 )}
               </div>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-3">
+              <p className="text-xs sm:text-sm text-black mb-3">
                 {project.date}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-2 py-1 rounded-md bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs"
+                    className="px-2 py-1 rounded-md bg-purple-100 text-purple-700 text-xs"
                   >
                     {tech}
                   </span>
@@ -138,9 +138,9 @@ export default function Projects() {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="overflow-hidden"
             >
-              <div className="px-6 pb-6 border-t dark:border-neutral-800 pt-6 space-y-6">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-neutral-300 pt-4 sm:pt-6 space-y-4 sm:space-y-6">
                 {/* Description */}
-                <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-black leading-relaxed">
                   {project.description}
                 </p>
 
@@ -161,10 +161,10 @@ export default function Projects() {
 
                 {/* Key Achievements */}
                 <div>
-                  <h4 className="text-sm font-semibold mb-3 text-neutral-800 dark:text-neutral-200">
+                  <h4 className="text-sm font-semibold mb-3 text-black">
                     Key Achievements:
                   </h4>
-                  <ul className="list-disc list-inside space-y-2 text-sm text-neutral-600 dark:text-neutral-400">
+                  <ul className="list-disc list-inside space-y-2 text-sm text-black">
                     {project.achievements.map((achievement, idx) => (
                       <li key={idx}>{achievement}</li>
                     ))}
@@ -179,17 +179,17 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section id="projects" className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Projects</h2>
-          <p className="text-neutral-600 dark:text-neutral-300 text-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">Projects</h2>
+          <p className="text-black text-base sm:text-lg px-4">
             A collection of my recent work and contributions
           </p>
         </motion.div>
@@ -209,7 +209,7 @@ export default function Projects() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
           className="mt-16"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-neutral-900 dark:text-white">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-black">
             Personal Projects
           </h3>
           <div className="space-y-4">

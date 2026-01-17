@@ -36,12 +36,9 @@ export default function About() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Gradient background effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-3xl"></div>
-      </div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none"></div>
 
       {/* Main content */}
       <motion.div
@@ -53,7 +50,7 @@ export default function About() {
         {/* Greeting */}
         <motion.p
           variants={itemVariants as any}
-          className="text-cyan-400 text-sm md:text-base mb-4 font-mono"
+          className="text-cyan-600 dark:text-primary text-sm md:text-base mb-4 font-mono"
         >
           Hello, I'm
         </motion.p>
@@ -61,7 +58,7 @@ export default function About() {
         {/* Name with gradient */}
         <motion.h1
           variants={itemVariants as any}
-          className="text-6xl md:text-7xl lg:text-8xl mb-6 tracking-tight"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-6 tracking-tight px-4"
         >
           <span 
             className="font-tr2n text-cyan-400 tr2n-font" 
@@ -74,7 +71,7 @@ export default function About() {
         {/* Title/Description */}
         <motion.p
           variants={itemVariants as any}
-          className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-900 dark:text-neutral-100 mb-6 max-w-4xl mx-auto leading-relaxed px-4"
         >
           Software Engineer specializing in{' '}
           <span className="text-purple-400 font-semibold">Full Stack Development</span> &{' '}
@@ -84,7 +81,7 @@ export default function About() {
         {/* Mission statement */}
         <motion.p
           variants={itemVariants as any}
-          className="text-base md:text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed px-4"
+          className="text-sm sm:text-base md:text-lg text-neutral-900 dark:text-neutral-100 mb-12 max-w-3xl mx-auto leading-relaxed px-4"
         >
           Passionate about creating immersive gaming experiences and building
           intelligent systems that push the boundaries of what's possible. Let's build the
@@ -94,11 +91,11 @@ export default function About() {
         {/* CTA Buttons */}
         <motion.div
           variants={itemVariants as any}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 px-4"
         >
           <button
             onClick={() => scrollToSection('projects')}
-            className="group relative px-8 py-3 bg-purple-600 text-white rounded-lg font-medium overflow-hidden transition-all duration-300 hover:bg-purple-700 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
+            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 bg-purple-600 text-white rounded-lg font-medium overflow-hidden transition-all duration-300 hover:bg-purple-700 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 text-sm sm:text-base"
           >
             <span className="relative z-10">View My Work</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -107,7 +104,7 @@ export default function About() {
           <a
             href={resumePdf}
             download
-            className="group px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center gap-2"
+            className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <svg
               className="w-5 h-5"
@@ -135,7 +132,7 @@ export default function About() {
             href="https://github.com/DSagre25"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors duration-300 hover:scale-110 transform"
+            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
             aria-label="GitHub"
           >
             <Github className="w-6 h-6" />
@@ -144,14 +141,14 @@ export default function About() {
             href="https://www.linkedin.com/in/dhruv-sagre-54998122a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110 transform"
+            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-6 h-6" />
           </a>
           <a
             href="mailto:dhruvsagre252@gmail.com"
-            className="text-gray-400 hover:text-purple-400 transition-colors duration-300 hover:scale-110 transform"
+            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
             aria-label="Email"
           >
             <Mail className="w-6 h-6" />
@@ -172,7 +169,7 @@ export default function About() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
         onClick={() => scrollToSection('about')}
       >
-        <div className="flex flex-col items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors duration-300">
+        <div className="flex flex-col items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-500 transition-colors duration-300">
           <span className="text-sm font-medium">Scroll Down</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </div>
