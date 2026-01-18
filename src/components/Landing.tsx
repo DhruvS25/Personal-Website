@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion, easeInOut } from 'framer-motion';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 import resumePdf from '../assets/resume.pdf';
+import { useState } from 'react';
 
-export default function About() {
+export default function Landing() {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -22,10 +23,12 @@ export default function About() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: 'easeOut',
+        ease: easeInOut,
       },
     },
   };
+
+  const [fontStyle, setFontStyle] = useState('oxanium');
 
   // Smooth scroll to section
   const scrollToSection = (sectionId: string) => {
@@ -50,7 +53,7 @@ export default function About() {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-lightprimary dark:text-darkaccent text-sm md:text-base mb-4 font-mono"
+          className="text-lightprimary dark:text-darkaccent text-sm sm:text-xl md:text-1xl lg:text-2xl md:text-base mb-4 font-mono"
         >
           Hello, I'm
         </motion.p>
@@ -58,12 +61,15 @@ export default function About() {
         {/* Name with gradient */}
         <motion.h1
           variants={itemVariants}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-6 tracking-tight px-4"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl mb-6 tracking-tight px-4"
         >
           <span 
-            className="font-tr2n text-lightprimary dark:text-darkprimary tr2n-font"
+            onMouseEnter={() => setFontStyle(fontStyle === 'oxanium' ? 'default' : 'oxanium')}
+            className={`cursor-pointer transition-all duration-300 ${
+              fontStyle === 'oxanium' ? 'font-oxanium font-extrabold text-outline' : 'font-tr2n'
+            } text-lightprimary dark:text-darkprimary`}
           >
-            Dhruv Sagre
+            DHRUV SAGRE
           </span>
         </motion.h1>
 

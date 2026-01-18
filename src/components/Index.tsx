@@ -1,11 +1,11 @@
 import { Navbar } from './Navbar'
 import { ThemeToggle } from './ThemeToggle'
 import Footer from './Footer'
-import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 import Hero from './Hero'
 import NeonSideEffects from './NeonSideEffects'
+import Landing from './Landing'
 
 
 
@@ -17,7 +17,7 @@ export default function Index() {
       <div className="relative z-10">
         <Navbar />
         {/* Home Section */}
-        <About />
+        <Landing />
         {/* About Section */}
         <Hero />
         {/* Projects Section */}

@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -16,6 +17,7 @@
   --color-darkaccent: #FD9800;
   
   --font-tr2n: 'Tr2n', sans-serif;
+  --font-oxanium: 'Oxanium', sans-serif;
 }
 
 /* Tr2n Font Declaration */
@@ -51,4 +53,22 @@ body {
 html.dark body {
   background-color: #0a0a0a;
   color: #e5e5e5;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1.5pxr;
+  color: transparent;
+}
+
+.text-outline {
+  -webkit-text-stroke: 3px;
+  color: transparent;
+}
+
+.text-outline {
+  -webkit-text-stroke-color: #06b6d4;
+}
+
+.dark .text-outline {
+  -webkit-text-stroke-color: #F31414;
 }

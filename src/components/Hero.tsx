@@ -13,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-lighttext dark:text-darktext mb-4">About Me</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-oxanium font-bold text-lightprimary dark:text-darkprimary mb-4">About Me</h1>
           <p className="text-lighttext dark:text-darktext text-base sm:text-lg md:text-xl px-4">A passionate software engineer with a love for creating innovative solutions</p>
         </motion.div>
 
