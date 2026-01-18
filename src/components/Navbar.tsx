@@ -84,7 +84,7 @@ export function Navbar() {
             <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-2 transition-opacity hover:opacity-80 text-lighttext dark:text-darktext text-xl sm:text-2xl font-tr2n"
+              className="flex items-center gap-2 transition-opacity hover:opacity-80 text-lightprimary dark:text-darkprimary text-xl sm:text-2xl font-tr2n"
               style={{ fontFamily: "'Tr2n', sans-serif" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -50,7 +50,7 @@ export default function About() {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-lightprimary dark:text-darkprimary text-sm md:text-base mb-4 font-mono"
+          className="text-lightprimary dark:text-darkaccent text-sm md:text-base mb-4 font-mono"
         >
           Hello, I'm
         </motion.p>
@@ -94,16 +94,16 @@ export default function About() {
         >
           <button
             onClick={() => scrollToSection('projects')}
-            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 bg-purple-600 text-white rounded-lg font-medium overflow-hidden transition-all duration-300 hover:bg-purple-700 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 text-sm sm:text-base"
+            className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 bg-lightaccent dark:bg-darkprimary text-white rounded-lg font-medium overflow-hidden transition-all duration-300 hover:bg-lightaccent dark:bg-darksecondary hover:scale-105 hover:shadow-lg hover:shadow-lightprimary dark:hover:shadow-darkprimary/50 text-sm sm:text-base"
           >
             <span className="relative z-10">View My Work</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-lightprimary dark:from-darkprimary to-lightaccent dark:to-darkaccent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </button>
 
           <a
             href={resumePdf}
             download
-            className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-cyan-500 text-cyan-400 rounded-lg font-medium transition-all duration-300 hover:bg-cyan-500 hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-lightprimary dark:border-darkaccent text-lightprimary dark:text-darkaccent rounded-lg font-medium transition-all duration-300 hover:bg-lightprimary dark:hover:bg-darksecondary hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <svg
               className="w-5 h-5"
