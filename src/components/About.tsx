@@ -49,20 +49,19 @@ export default function About() {
       >
         {/* Greeting */}
         <motion.p
-          variants={itemVariants as any}
-          className="text-cyan-600 dark:text-primary text-sm md:text-base mb-4 font-mono"
+          variants={itemVariants}
+          className="text-lightprimary dark:text-darkprimary text-sm md:text-base mb-4 font-mono"
         >
           Hello, I'm
         </motion.p>
 
         {/* Name with gradient */}
         <motion.h1
-          variants={itemVariants as any}
+          variants={itemVariants}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-6 tracking-tight px-4"
         >
           <span 
-            className="font-tr2n text-cyan-400 tr2n-font" 
-            style={{ fontFamily: "'Tr2n', sans-serif", color: '#22d3ee' }}
+            className="font-tr2n text-lightprimary dark:text-darkprimary tr2n-font"
           >
             Dhruv Sagre
           </span>
@@ -70,18 +69,18 @@ export default function About() {
 
         {/* Title/Description */}
         <motion.p
-          variants={itemVariants as any}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-neutral-900 dark:text-neutral-100 mb-6 max-w-4xl mx-auto leading-relaxed px-4"
+          variants={itemVariants}
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-lighttext dark:text-darktext mb-6 max-w-4xl mx-auto leading-relaxed px-4"
         >
           Software Engineer specializing in{' '}
-          <span className="text-purple-400 font-semibold">Full Stack Development</span> &{' '}
-          <span className="text-cyan-400 font-semibold">Artificial Intelligence Tools</span>
+          <span className="text-lightaccent dark:text-darkaccent font-semibold">Full Stack Development</span> &{' '}
+          <span className="text-lightprimary dark:text-darkprimary font-semibold">Artificial Intelligence Tools</span>
         </motion.p>
 
         {/* Mission statement */}
         <motion.p
-          variants={itemVariants as any}
-          className="text-sm sm:text-base md:text-lg text-neutral-900 dark:text-neutral-100 mb-12 max-w-3xl mx-auto leading-relaxed px-4"
+          variants={itemVariants}
+          className="text-sm sm:text-base md:text-lg text-lighttext dark:text-darktext mb-12 max-w-3xl mx-auto leading-relaxed px-4"
         >
           Passionate about creating immersive gaming experiences and building
           intelligent systems that push the boundaries of what's possible. Let's build the
@@ -90,7 +89,7 @@ export default function About() {
 
         {/* CTA Buttons */}
         <motion.div
-          variants={itemVariants as any}
+          variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 px-4"
         >
           <button
@@ -125,14 +124,14 @@ export default function About() {
 
         {/* Social Links */}
         <motion.div
-          variants={itemVariants as any }
+          variants={itemVariants}
           className="flex gap-6 justify-center"
         >
           <a
             href="https://github.com/DSagre25"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
+            className="text-lighttext dark:text-darktext hover:text-lightprimary dark:hover:text-darkprimary transition-colors duration-300 hover:scale-110 transform"
             aria-label="GitHub"
           >
             <Github className="w-6 h-6" />
@@ -141,14 +140,14 @@ export default function About() {
             href="https://www.linkedin.com/in/dhruv-sagre-54998122a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
+            className="text-lighttext dark:text-darktext hover:text-lightprimary dark:hover:text-darkprimary transition-colors duration-300 hover:scale-110 transform"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-6 h-6" />
           </a>
           <a
             href="mailto:dhruvsagre252@gmail.com"
-            className="text-neutral-900 dark:text-neutral-100 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-300 hover:scale-110 transform"
+            className="text-lighttext dark:text-darktext hover:text-lightprimary dark:hover:text-darkprimary transition-colors duration-300 hover:scale-110 transform"
             aria-label="Email"
           >
             <Mail className="w-6 h-6" />
@@ -169,7 +168,7 @@ export default function About() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer"
         onClick={() => scrollToSection('about')}
       >
-        <div className="flex flex-col items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-purple-400 dark:hover:text-purple-500 transition-colors duration-300">
+        <div className="flex flex-col items-center gap-2 text-lighttext/60 dark:text-darktext/60 hover:text-lightaccent dark:hover:text-darkaccent transition-colors duration-300">
           <span className="text-sm font-medium">Scroll Down</span>
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </div>

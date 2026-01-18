@@ -12,7 +12,7 @@ import NeonSideEffects from './NeonSideEffects'
 export default function Index() {
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased relative">
+    <div className="min-h-screen bg-lightbg dark:bg-darkbg text-lighttext dark:text-darktext antialiased relative">
       <NeonSideEffects />
       <div className="relative z-10">
         <Navbar />

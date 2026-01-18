@@ -92,33 +92,33 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
-        className="rounded-xl border border-neutral-300 bg-white hover:shadow-lg transition-shadow overflow-hidden"
+        className="rounded-xl border border-lightprimary/30 dark:border-darkprimary/30 bg-lightbg dark:bg-darkbg hover:shadow-lg transition-shadow overflow-hidden"
       >
         {/* Collapsed View - Resume Style */}
         <div
           onClick={() => toggleFn(index)}
-          className="p-4 sm:p-6 cursor-pointer hover:bg-neutral-50 transition-colors"
+          className="p-4 sm:p-6 cursor-pointer hover:bg-lightbg/80 dark:hover:bg-darkbg/80 transition-colors"
         >
           <div className="flex items-start justify-between gap-3 sm:gap-4">
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between mb-2 gap-2">
-                <h3 className="text-lg sm:text-xl font-bold text-black break-words">
+                <h3 className="text-lg sm:text-xl font-bold text-lighttext dark:text-darktext break-words">
                   {project.title}
                 </h3>
                 {isExpanded ? (
-                  <ChevronUp className="w-5 h-5 text-black flex-shrink-0" />
+                  <ChevronUp className="w-5 h-5 text-lighttext dark:text-darktext flex-shrink-0" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-black flex-shrink-0" />
+                  <ChevronDown className="w-5 h-5 text-lighttext dark:text-darktext flex-shrink-0" />
                 )}
               </div>
-              <p className="text-xs sm:text-sm text-black mb-3">
+              <p className="text-xs sm:text-sm text-lighttext dark:text-darktext mb-3">
                 {project.date}
               </p>
               <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-2 py-1 rounded-md bg-purple-100 text-purple-700 text-xs"
+                    className="px-2 py-1 rounded-md bg-lightaccent/20 dark:bg-darkaccent/20 text-lightaccent dark:text-darkaccent text-xs"
                   >
                     {tech}
                   </span>
@@ -138,9 +138,9 @@ export default function Projects() {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="overflow-hidden"
             >
-              <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-neutral-300 pt-4 sm:pt-6 space-y-4 sm:space-y-6">
+              <div className="px-4 sm:px-6 pb-4 sm:pb-6 border-t border-lightprimary/30 dark:border-darkprimary/30 pt-4 sm:pt-6 space-y-4 sm:space-y-6">
                 {/* Description */}
-                <p className="text-sm sm:text-base text-black leading-relaxed">
+                <p className="text-sm sm:text-base text-lighttext dark:text-darktext leading-relaxed">
                   {project.description}
                 </p>
 
@@ -161,12 +161,12 @@ export default function Projects() {
 
                 {/* Key Achievements */}
                 <div>
-                  <h4 className="text-sm font-semibold mb-3 text-black">
+                  <h4 className="text-sm font-semibold mb-3 text-lighttext dark:text-darktext">
                     Key Achievements:
                   </h4>
-                  <ul className="list-disc list-inside space-y-2 text-sm text-black">
+                  <ul className="list-disc list-inside space-y-2">
                     {project.achievements.map((achievement, idx) => (
-                      <li key={idx}>{achievement}</li>
+                      <li key={idx} className="text-sm text-lighttext dark:text-darktext leading-relaxed">{achievement}</li>
                     ))}
                   </ul>
                 </div>
@@ -188,8 +188,8 @@ export default function Projects() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">Projects</h2>
-          <p className="text-black text-base sm:text-lg px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-lighttext dark:text-darktext">Projects</h2>
+          <p className="text-lighttext dark:text-darktext text-base sm:text-lg px-4">
             A collection of my recent work and contributions
           </p>
         </motion.div>
@@ -209,7 +209,7 @@ export default function Projects() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
           className="mt-16"
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-black">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-light-text dark:text-dark-text">
             Personal Projects
           </h3>
           <div className="space-y-4">

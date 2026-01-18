@@ -74,8 +74,8 @@ export function Navbar() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/80 backdrop-blur-md shadow-lg'
-            : 'bg-white/60 backdrop-blur-sm'
+            ? 'bg-lightbg/80 dark:bg-darkbg/80 backdrop-blur-md shadow-lg'
+            : 'bg-lightbg/60 dark:bg-darkbg/60 backdrop-blur-sm'
         }`}
       >
         <div className="mx-auto max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8">
@@ -84,8 +84,8 @@ export function Navbar() {
             <motion.a
               href="#home"
               onClick={(e) => handleNavClick(e, '#home')}
-              className="flex items-center gap-2 transition-opacity hover:opacity-80 text-black text-xl sm:text-2xl font-tr2n"
-              style={{ fontFamily: "'Tr2n', sans-serif", color: 'black' }}
+              className="flex items-center gap-2 transition-opacity hover:opacity-80 text-lighttext dark:text-darktext text-xl sm:text-2xl font-tr2n"
+              style={{ fontFamily: "'Tr2n', sans-serif" }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -99,7 +99,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-sm font-medium text-black transition-colors hover:text-gray-700"
+                  className="text-sm font-medium text-lighttext dark:text-darktext transition-colors hover:text-lightprimary dark:hover:text-darkprimary"
                   whileHover={{ y: -2 }}
                   whileTap={{ y: 0 }}
                 >
@@ -112,7 +112,7 @@ export function Navbar() {
             <div className="hidden md:block">
               <motion.button
                 onClick={(e) => handleNavClick(e, '#contact')}
-                className="rounded-md border border-black/20 bg-transparent px-4 py-2 text-sm font-medium text-black transition-all hover:border-black/40 hover:bg-black/10"
+                className="rounded-md border border-lighttext/20 dark:border-darktext/20 bg-transparent px-4 py-2 text-sm font-medium text-lighttext dark:text-darktext transition-all hover:border-lighttext/40 dark:hover:border-darktext/40 hover:bg-lighttext/10 dark:hover:bg-darktext/10"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -124,7 +124,7 @@ export function Navbar() {
             <motion.button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden text-black p-2"
+              className="md:hidden text-lighttext dark:text-darktext p-2"
               whileTap={{ scale: 0.95 }}
               aria-label="Toggle menu"
             >
@@ -141,7 +141,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md"
+              className="md:hidden overflow-hidden bg-lightbg/95 dark:bg-darkbg/95 backdrop-blur-md"
             >
               <div className="px-3 sm:px-4 py-3 sm:py-4 space-y-3 sm:space-y-4">
                 {navLinks.map((link, index) => (
@@ -149,7 +149,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="block text-sm sm:text-base font-medium text-black transition-colors hover:text-gray-700"
+                    className="block text-sm sm:text-base font-medium text-lighttext dark:text-darktext transition-colors hover:text-lightprimary dark:hover:text-darkprimary"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
@@ -159,7 +159,7 @@ export function Navbar() {
                 ))}
                 <motion.button
                   onClick={(e) => handleNavClick(e, '#contact')}
-                  className="w-full rounded-md border border-black/20 bg-transparent px-4 py-2 text-xs sm:text-sm font-medium text-black transition-all hover:border-black/40 hover:bg-black/10"
+                  className="w-full rounded-md border border-lighttext/20 dark:border-darktext/20 bg-transparent px-4 py-2 text-xs sm:text-sm font-medium text-lighttext dark:text-darktext transition-all hover:border-lighttext/40 dark:hover:border-darktext/40 hover:bg-lighttext/10 dark:hover:bg-darktext/10"
                   initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: navLinks.length * 0.1 }}

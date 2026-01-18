@@ -21,42 +21,42 @@ export default function Contact() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: '-100px' }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
-                    className="rounded-xl border border-neutral-300 p-4 sm:p-6 shadow-sm bg-white"
+                    className="rounded-xl border border-lightprimary/30 dark:border-darkprimary/30 p-4 sm:p-6 shadow-sm bg-lightbg dark:bg-darkbg"
                 >
-                    <h2 className="mb-4 text-2xl sm:text-3xl font-bold text-black">Contact</h2>
+                    <h2 className="mb-4 text-2xl sm:text-3xl font-bold text-lighttext dark:text-darktext">Contact</h2>
                     <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 sm:grid-cols-2">
                     <div className="grid gap-1">
-                        <label htmlFor="name" className="text-sm text-black">Name</label>
+                        <label htmlFor="name" className="text-sm text-lighttext dark:text-darktext">Name</label>
                         <input
                         id="name"
-                        className="rounded-md border border-neutral-300 bg-white px-3 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 text-black focus:border-neutral-500"
+                        className="rounded-md border border-lightprimary/30 dark:border-darkprimary/30 bg-lightbg dark:bg-darkbg px-3 py-2 outline-none ring-0 transition-colors placeholder:text-lighttext/40 dark:placeholder:text-darktext/40 text-lighttext dark:text-darktext focus:border-lightprimary/60 dark:focus:border-darkprimary/60"
                         placeholder="John Smith"
                         {...register('name', { required: true })}
                         />
-                        {errors.name && <span className="text-sm text-red-500">Name is required</span>}
+                        {errors.name && <span className="text-sm text-lightaccent dark:text-darkaccent">Name is required</span>}
                     </div>
                     <div className="grid gap-1">
-                        <label htmlFor="email" className="text-sm text-black">Email</label>
+                        <label htmlFor="email" className="text-sm text-lighttext dark:text-darktext">Email</label>
                         <input
                         id="email"
                         type="email"
-                        className="rounded-md border border-neutral-300 bg-white px-3 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 text-black focus:border-neutral-500"
+                        className="rounded-md border border-lightprimary/30 dark:border-darkprimary/30 bg-lightbg dark:bg-darkbg px-3 py-2 outline-none ring-0 transition-colors placeholder:text-lighttext/40 dark:placeholder:text-darktext/40 text-lighttext dark:text-darktext focus:border-lightprimary/60 dark:focus:border-darkprimary/60"
                         placeholder="johnsmith@example.com"
                         {...register('email', { required: true })}
                         />
-                        {errors.email && <span className="text-sm text-red-500">Email is required</span>}
+                        {errors.email && <span className="text-sm text-lightaccent dark:text-darkaccent">Email is required</span>}
                     </div>
                     <div className="sm:col-span-2 w-full">
-                        <label htmlFor="message" className="text-sm text-black">Message</label>
+                        <label htmlFor="message" className="text-sm text-lighttext dark:text-darktext">Message</label>
                         <textarea
                         id="message"
-                        className="w-full rounded-md border border-neutral-300 bg-white px-3 py-2 outline-none ring-0 transition-colors placeholder:text-neutral-400 text-black focus:border-neutral-500 resize-none"
+                        className="w-full rounded-md border border-lightprimary/30 dark:border-darkprimary/30 bg-lightbg dark:bg-darkbg px-3 py-2 outline-none ring-0 transition-colors placeholder:text-lighttext/40 dark:placeholder:text-darktext/40 text-lighttext dark:text-darktext focus:border-lightprimary/60 dark:focus:border-darkprimary/60 resize-none"
                         placeholder="Hey let's connect! I want to discuss a potential project or collaboration."
                         rows={4}
                         />
                     </div>
                     <div className="sm:col-span-2">
-                        <button type="submit" className="w-full rounded-md bg-black px-4 py-2 text-white transition-colors hover:bg-neutral-800">
+                        <button type="submit" className="w-full rounded-md bg-lightaccent dark:bg-darkaccent px-4 py-2 text-lightbg dark:text-darkbg transition-colors hover:bg-lightaccent/90 dark:hover:bg-darkaccent/90">
                         Submit
                         </button>
                     </div>
