@@ -2,6 +2,7 @@ import { Navbar } from './Navbar'
 import { ThemeToggle } from './ThemeToggle'
 import Footer from './Footer'
 import Projects from './Projects'
+import Experience from './Experience'
 import Contact from './Contact'
 import Hero from './Hero'
 import NeonSideEffects from './NeonSideEffects'
@@ -20,6 +21,8 @@ export default function Index() {
         <Landing />
         {/* About Section */}
         <Hero />
+        {/* Experience Section */}
+        <Experience />
         {/* Projects Section */}
         <Projects />
         {/* Contact Section */}

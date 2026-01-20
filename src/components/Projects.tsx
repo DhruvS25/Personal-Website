@@ -204,7 +204,7 @@ export default function Projects() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-lighttext dark:text-darktext">Projects</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-lightprimary dark:text-darkprimary">Projects</h2>
           <p className="text-lighttext dark:text-darktext text-base sm:text-lg px-4">
             A collection of my recent work and contributions
           </p>
@@ -225,7 +225,7 @@ export default function Projects() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
           className="text-center mt-16"
         >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-light-text dark:text-dark-text">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-lightsecondary dark:text-darksecondary">
             Personal Projects
           </h3>
 

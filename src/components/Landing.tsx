@@ -53,7 +53,7 @@ export default function Landing() {
         {/* Greeting */}
         <motion.p
           variants={itemVariants}
-          className="text-lightprimary dark:text-darkaccent text-sm sm:text-xl md:text-1xl lg:text-2xl md:text-base mb-4 font-mono"
+          className="text-lightaccent dark:text-darkaccent text-sm sm:text-xl md:text-1xl lg:text-2xl md:text-base mb-4 font-mono"
         >
           Hello, I'm
         </motion.p>
