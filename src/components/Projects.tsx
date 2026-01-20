@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+
 const projects = [
   {
     title: 'Bell Artificial Intelligence Technician',
@@ -26,7 +27,11 @@ const projects = [
     achievements: [
       'Implemented masking techniques using AI to help mask where the smartphone is on the video feed of the VR headset',
       'Positioned phone screen overlay on top of the phone for enhanced VR experience'
-    ]
+    ],
+    media: {
+      type: 'youtube',
+      url: 'https://www.youtube.com/embed/cNDiibXy4fQ?si=Mxd4n6Qk4sS7DWC6'
+    }
   },
   {
     title: 'UWOutlines',
@@ -40,13 +45,15 @@ const projects = [
       'Integrated ChatGPT with the editing system',
       'Built infrastructure for feedback, notification, and requisite management systems',
       'Ensured data security, system reliability, and maintainability'
-    ]
+    ],
+    media: {
+      type: 'youtube',
+      url: 'https://www.youtube.com/embed/WsDy3XwIQYc?si=g1RHECSucNPCumSD'
+    }
   }
 ];
 
-// Personal Projects - Template cards for you to fill in
-// Optional: Add media property if you have a video or image:
-// media: { type: 'youtube', url: 'https://www.youtube.com/embed/YOUR_VIDEO_ID' }
+// Personal Projects - Template cards
 const personalProjects = [
   {
     title: 'Godspeed',
@@ -60,14 +67,14 @@ const personalProjects = [
     ]
   },
   {
-    title: 'Project Name 2',
-    date: 'Date',
-    technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
-    description: 'Description of your project goes here. Explain what the project is about, what problem it solves, and any key features.',
+    title: 'Shoppers Stop St.Maarten Website',
+    date: 'August 2024 - December 2024',
+    technologies: ['WordPress', 'PHP', 'JavaScript', 'HTML/CSS', 'E-commerce Development', 'UI/UX Design'],
+    description: 'Developed a comprehensive e-commerce website for Shoppers Stop St.Maarten, a souvenir and print store in St.Maarten, to enhance their online presence and sales capabilities.',
     achievements: [
-      'Achievement or feature 1',
-      'Achievement or feature 2',
-      'Achievement or feature 3'
+      'Designed and implemented a user-friendly interface that reflects the brand identity',
+      'Created a seamless ordering experience to make the printing seamless for customers',
+      'Optimized the website for performance and mobile responsiveness'
     ]
   }
 ];
@@ -84,7 +91,16 @@ export default function Projects() {
     setExpandedPersonalIndex(expandedPersonalIndex === index ? null : index);
   };
 
-  const renderProjectCard = (project: typeof projects[0], index: number, isExpanded: boolean, toggleFn: (index: number) => void) => {
+  type Project = {
+    title: string;
+    date: string;
+    technologies: string[];
+    description: string;
+    achievements: string[];
+    media?: { type: string; url: string };
+  };
+
+  const renderProjectCard = (project: Project, index: number, isExpanded: boolean, toggleFn: (index: number) => void) => {
     return (
       <motion.div
         key={project.title}
@@ -207,18 +223,21 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.3 }}
-          className="mt-16"
+          className="text-center mt-16"
         >
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-light-text dark:text-dark-text">
             Personal Projects
           </h3>
-          <div className="space-y-4">
+
+        </motion.div>          
+        
+        <div className="space-y-4">
             {personalProjects.map((project, index) => {
               const isExpanded = expandedPersonalIndex === index;
               return renderProjectCard(project, index, isExpanded, togglePersonalExpand);
             })}
-          </div>
-        </motion.div>
+        </div>
+
       </div>
     </section>
   );
