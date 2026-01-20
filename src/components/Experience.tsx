@@ -131,7 +131,7 @@ export default function Experience() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-lightprimary dark:text-darkprimary">Experience</h2>
+          <h2 className="font-oxanium font-bold text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-lightprimary dark:text-darkprimary">Experience</h2>
           <p className="text-lighttext dark:text-darktext text-base sm:text-lg px-4">
             My professional journey and career highlights
           </p>
