@@ -45,7 +45,7 @@ export default function Landing() {
 
       {/* Main content */}
       <motion.div
-        className="relative z-10 max-w-5xl mx-auto text-center"
+        className="relative z-10 max-w-7xl mx-auto text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -109,7 +109,7 @@ export default function Landing() {
           <a
             href={resumePdf}
             download
-            className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-lightprimary dark:border-darkaccent text-lightprimary dark:text-darkaccent rounded-lg font-medium transition-all duration-300 hover:bg-lightprimary dark:hover:bg-darksecondary hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-lightprimary dark:border-darkprimary text-lightprimary dark:text-darkprimary rounded-lg font-medium transition-all duration-300 hover:bg-lightprimary dark:hover:bg-darkprimary hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             <svg
               className="w-5 h-5"

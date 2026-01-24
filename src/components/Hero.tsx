@@ -4,7 +4,7 @@ import ProfilePic from '../assets/Portfolio_img.jpg'
 export default function Hero() {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center px-4 py-12 sm:py-16 md:py-20">
-      <div className="mx-auto max-w-6xl w-full">
+      <div className="mx-auto max-w-7xl w-full">
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-          className="flex flex-col md:flex-row items-start gap-6 sm:gap-8 mb-6 sm:mb-8"
+          className="flex flex-col md:flex-row items-start gap-6 sm:gap-8 mb-8 sm:mb-8"
         >
           {/* Profile Image */}
           <div className="w-full md:w-1/2">
@@ -35,55 +35,69 @@ export default function Hero() {
           </div>
 
           {/* Content Section */}
-          <div className="w-full md:w-1/2 space-y-4 sm:space-y-6">
+          <div className="w-full md:w-5/8 space-y-4 sm:space-y-4">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-lighttext dark:text-darktext">Building the Future, One Line at a Time</h2>
             
             <div className="text-lighttext dark:text-darktext">
               <p className="text-sm sm:text-base md:text-lg leading-relaxed">
-                I recently graduated from Western University with a Bachelor's in Software Engineering, where I made the Dean's Honor List.
-                Since then, I've worked as a Software Developer at AIR Studio, where I built and deployed scalable applications used by over 30 clients,
-                including fintech and AI-driven tools. I've also worked as an AI Model Evaluator at Outlier, refining generative AI models, and
-                previously as a Backend Developer at Secure Authorities, where I built an e-commerce database system from scratch.
-                I'm passionate about intelligent systems and product-focused software engineering, and I've built and applied my knowledge in AI projects, such as B.A.I.T.,
-                which was my capstone project completed in partnership with Bell Canada.
+                Hi, I’m Dhruv Sagre, a Software Engineering graduate from Western University and a former Software Developer
+                at AIR Studio. I specialize in full-stack development with a strong focus on AI/ML-powered applications and scalable 
+                web technologies. My recent work includes building an AI-driven virtual try-on platform and implementing real-time streaming systems
+                for proprietary language models—projects that strengthened my passion for creating intelligent, user-centric software.
+
+                I thrive in collaborative, multidisciplinary environments where technology meets real-world impact, and I’m especially
+                motivated by opportunities that blend innovation with thoughtful design. Outside of work, I enjoy volleyball,
+                weightlifting, gaming, and game development, and I’ve always been driven by a long-term goal to build meaningful, 
+                innovative products that people genuinely love to use.
               </p>
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+              className="mt-6 sm:mt-8 flex justify-center"
+              >
+              <div className="bg-lightprimary/10 dark:bg-darkprimary/10 rounded-xl p-4 sm:p-6 max-w-2xl border border-lightprimary/50 dark:border-darkprimary/50 w-full sm:w-auto">
+                <p className="text-lighttext dark:text-darktext text-sm sm:text-base md:text-lg italic leading-relaxed">
+                  "One machine can do the work of fifty ordinary men.  No machine can do the work of one extraordinary man." - Elbert Hubbard 
+                </p>
+              </div>
+            </motion.div>
 
-            {/* Quick Highlights */}
-            <div className="mt-6 sm:mt-8">
+          </div>
+
+        {/* Quick Highlights */}
+        </motion.div>
+        <div className="mt-6 sm:mt-8">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-lighttext dark:text-darktext mb-3 sm:mb-4">Quick Highlights</h3>
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
-                  Computer Science Graduate
+                  Software Engineering Graduate
                 </span>
                 <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
-                  3+ Years Game Development
+                  3+ Years Fullstack Development
                 </span>
                 <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
                   AI/ML Enthusiast
                 </span>
                 <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
-                  Open Source Contributor
+                  React Developer
+                </span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
+                  Database Creation & Management
+                </span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
+                  Game Development
+                </span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
+                  Python
+                </span>
+                <span className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-lightprimary/20 dark:bg-darkprimary/20 border border-lightprimary/50 dark:border-darkprimary/50 text-lighttext dark:text-darktext text-xs sm:text-sm md:text-base">
+                  Customer Focused Solutions
                 </span>
               </div>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Quote Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
-          className="mt-6 sm:mt-8 flex justify-center sm:justify-end"
-        >
-          <div className="bg-lightprimary/10 dark:bg-darkprimary/10 rounded-xl p-4 sm:p-6 max-w-2xl border border-lightprimary/50 dark:border-darkprimary/50 w-full sm:w-auto">
-            <p className="text-lighttext dark:text-darktext text-sm sm:text-base md:text-lg italic leading-relaxed">
-              "The best way to predict the future is to create it. I'm here to build the games and AI systems that will shape tomorrow's digital experiences."
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
