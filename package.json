@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "private": true,
+  "homepage": "https://dhruvs25.github.io/Personal-Website/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
