@@ -1,6 +1,5 @@
 import { motion, easeInOut } from 'framer-motion';
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
-import resumePdf from '../assets/resume.pdf';
 import { useState } from 'react';
 
 export default function Landing() {
@@ -107,7 +106,7 @@ export default function Landing() {
           </button>
 
           <a
-            href={resumePdf}
+            href="/assets/resume.pdf"
             download
             className="group w-full sm:w-auto px-6 sm:px-8 py-3 border-2 border-lightprimary dark:border-darkprimary text-lightprimary dark:text-darkprimary rounded-lg font-medium transition-all duration-300 hover:bg-lightprimary dark:hover:bg-darkprimary hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2 text-sm sm:text-base"
           >

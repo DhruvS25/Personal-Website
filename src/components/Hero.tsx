@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import ProfilePic from '../assets/Portfolio_img.jpg'
 
 export default function Hero() {
   return (
@@ -28,7 +27,7 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="w-full md:w-1/2">
             <img
-              src={ProfilePic}
+              src="/assets/Portfolio_img.jpg"
               alt="Profile"
               className="w-full h-auto object-cover rounded-2xl shadow-2xl"
             />
