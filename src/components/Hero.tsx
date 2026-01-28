@@ -27,7 +27,7 @@ export default function Hero() {
           {/* Profile Image */}
           <div className="w-full md:w-1/2">
             <img
-              src="/assets/Portfolio.jpg"
+              src="assets/Portfolio.jpg"
               alt="Profile"
               className="w-full h-auto object-cover rounded-2xl shadow-2xl"
             />
