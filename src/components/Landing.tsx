@@ -87,7 +87,7 @@ export default function Landing() {
           variants={itemVariants}
           className="text-sm sm:text-base md:text-lg text-lighttext dark:text-darktext mb-12 max-w-3xl mx-auto leading-relaxed px-4"
         >
-          Passionate about creating immersive gaming experiences and building
+          Passionate about creating immersive online experiences and building
           intelligent systems that push the boundaries of what's possible. Let's build the
           future together.
         </motion.p>
